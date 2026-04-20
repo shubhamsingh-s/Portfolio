@@ -6,11 +6,11 @@ import { ExternalLink, ShieldCheck, HeartPulse, Bot } from "lucide-react";
 
 const projects = [
   {
-    title: "KnowBot",
-    description: "A high-performance knowledge-augmented chatbot using RAG (Retrieval-Augmented Generation) to provide context-aware answers from custom datasets.",
-    tech: ["Next.js", "Python", "LangChain", "OpenAI", "Pinecone"],
+    title: "TalentVerse AI",
+    description: "A fully functional AI-powered resume screening system (ATS) that provides intelligent applicant matching, automated screening, and job recommendations.",
+    tech: ["Next.js", "Python", "OpenAI", "Tailwind CSS", "PostgreSQL"],
     github: "#",
-    demo: "#",
+    demo: "https://cvetraaa.vercel.app",
     icon: <Bot className="w-10 h-10" />,
     color: "from-blue-500 to-cyan-500"
   },
@@ -19,7 +19,7 @@ const projects = [
     description: "Hackathon-winning project that utilizes deep learning to predict chronic illnesses based on patient history and lifestyle factors with 95%+ accuracy.",
     tech: ["TensorFlow", "FastAPI", "React", "Cloud Computing"],
     github: "#",
-    demo: "#",
+    demo: "https://shealthcare.onrender.com",
     icon: <HeartPulse className="w-10 h-10" />,
     color: "from-red-500 to-pink-500"
   },
