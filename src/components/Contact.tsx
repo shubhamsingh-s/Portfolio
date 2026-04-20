@@ -39,7 +39,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground uppercase font-bold tracking-tight">Email</p>
-                  <a href="mailto:shubham@example.com" className="text-lg font-medium hover:text-accent transition-colors">shubham@example.com</a>
+                  <a href="mailto:shubham.s.45665@gmail.com" className="text-lg font-medium hover:text-accent transition-colors">shubham.s.45665@gmail.com</a>
                 </div>
               </div>
 
@@ -49,7 +49,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground uppercase font-bold tracking-tight">LinkedIn</p>
-                  <a href="#" className="text-lg font-medium hover:text-accent transition-colors">linkedin.com/in/shubham-singh</a>
+                  <a href="https://www.linkedin.com/in/shubham-singh-2a65a2285" className="text-lg font-medium hover:text-accent transition-colors">linkedin.com/in/shubham-singh-2a65a2285</a>
                 </div>
               </div>
 
