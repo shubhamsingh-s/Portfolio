@@ -25,18 +25,7 @@ const About = () => {
                 />
               </div>
             </div>
-            {/* Stats/Badges */}
-            <div className="absolute -bottom-6 -right-6 glass p-4 rounded-xl shadow-xl hidden md:block">
-              <div className="flex items-center gap-3">
-                <div className="bg-accent/20 p-2 rounded-lg">
-                  <Award className="w-6 h-6 text-accent" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground uppercase font-bold tracking-tighter">Hackathon</p>
-                  <p className="text-sm font-bold">Winner 2024</p>
-                </div>
-              </div>
-            </div>
+
           </motion.div>
 
           <motion.div
