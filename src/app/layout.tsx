@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "Portfolio of Shubham Singh, a CS student specializing in AI, Machine Learning, and Cloud Computing. Hackathon winner and developer of KnowBot.",
 };
 
+import CustomCursor from "@/components/CustomCursor";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +30,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} dark antialiased scroll-smooth`}
     >
       <body className="min-h-screen bg-background text-foreground font-sans">
+        <CustomCursor />
         {children}
       </body>
     </html>

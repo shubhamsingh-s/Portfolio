@@ -59,26 +59,64 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500;
   }
   
   .bg-gradient-mesh {
     background-color: hsla(222, 47%, 11%, 1);
     background-image:
-      radial-gradient(at 0% 0%, hsla(243, 75%, 59%, 0.15) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, hsla(222, 47%, 11%, 1) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, hsla(243, 75%, 59%, 0.2) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(263, 75%, 59%, 0.15) 0px, transparent 50%),
       radial-gradient(at 100% 100%, hsla(243, 75%, 59%, 0.1) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, hsla(222, 47%, 11%, 1) 0px, transparent 50%);
+      radial-gradient(at 0% 100%, hsla(263, 75%, 59%, 0.15) 0px, transparent 50%);
+  }
+
+  .spotlight {
+    position: relative;
+  }
+  .spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+    z-index: 3;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .spotlight:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Custom Cursor Hide */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
   }
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   @apply bg-background;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-muted rounded-full hover:bg-accent/50 transition-colors;
+  @apply bg-accent/20 rounded-full hover:bg-accent/40 transition-colors;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

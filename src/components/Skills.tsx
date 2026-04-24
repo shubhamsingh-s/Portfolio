@@ -52,14 +52,38 @@ const Skills = () => {
     show: { opacity: 1, scale: 1 }
   };
 
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const cards = document.getElementsByClassName("skill-card");
+    for (const card of cards as any) {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    }
+  };
+
   return (
-    <section id="skills" className="py-24 relative overflow-hidden">
+    <section id="skills" className="py-32 relative overflow-hidden" onMouseMove={handleMouseMove}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Technical <span className="text-accent">Stack</span></h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+        <div className="text-center mb-24">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl font-black mb-6 tracking-tighter"
+          >
+            Technical <span className="text-gradient">Stack</span>
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-muted-foreground text-xl max-w-2xl mx-auto font-medium"
+          >
             A comprehensive set of tools and technologies I use to bring intelligent ideas to life.
-          </p>
+          </motion.p>
         </div>
 
         <motion.div 
@@ -73,16 +97,16 @@ const Skills = () => {
             <motion.div
               key={index}
               variants={item}
-              className="glass p-8 rounded-3xl border border-white/5 hover:border-accent/40 transition-all duration-300 group"
+              className="skill-card spotlight glass p-10 rounded-[2.5rem] border-white/5 hover:border-accent/40 transition-all duration-500 group shadow-2xl"
             >
-              <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-8 group-hover:scale-110 transition-transform duration-500 shadow-inner">
                 {category.icon}
               </div>
-              <h3 className="text-xl font-bold mb-6">{category.title}</h3>
-              <ul className="space-y-3">
+              <h3 className="text-2xl font-black mb-8 tracking-tight">{category.title}</h3>
+              <ul className="space-y-4">
                 {category.skills.map((skill, sIndex) => (
-                  <li key={sIndex} className="flex items-center gap-3 text-muted-foreground group-hover:text-foreground transition-colors duration-200">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent/40" />
+                  <li key={sIndex} className="flex items-center gap-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300 font-medium">
+                    <div className="w-2 h-2 rounded-full bg-accent/40 group-hover:bg-accent transition-colors" />
                     {skill}
                   </li>
                 ))}
