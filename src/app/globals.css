@@ -80,7 +80,7 @@
     inset: 0;
     background: radial-gradient(
       600px circle at var(--mouse-x) var(--mouse-y),
-      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.03),
       transparent 40%
     );
     z-index: 3;
@@ -93,12 +93,6 @@
   }
 }
 
-/* Custom Cursor Hide */
-@media (pointer: fine) {
-  * {
-    cursor: none !important;
-  }
-}
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {

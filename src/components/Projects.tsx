@@ -90,14 +90,14 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="project-card spotlight group relative flex flex-col h-full glass rounded-[2.5rem] overflow-hidden border-white/5 hover:border-accent/30 transition-all duration-500 shadow-2xl hover:shadow-accent/10"
+              className="project-card spotlight group relative flex flex-col h-full glass rounded-[2.5rem] overflow-hidden border-white/5 hover:border-white/20 transition-all duration-500 shadow-lg hover:shadow-xl"
             >
               <div className="relative h-64 overflow-hidden">
                 <Image 
                   src={project.image} 
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60`} />
                 <div className="absolute top-6 left-6 p-3 glass rounded-2xl text-white backdrop-blur-2xl border-white/20 z-10">

@@ -97,9 +97,9 @@ const Skills = () => {
             <motion.div
               key={index}
               variants={item}
-              className="skill-card spotlight glass p-10 rounded-[2.5rem] border-white/5 hover:border-accent/40 transition-all duration-500 group shadow-2xl"
+              className="skill-card spotlight glass p-10 rounded-[2.5rem] border-white/5 hover:border-white/20 transition-all duration-500 group shadow-lg hover:shadow-xl"
             >
-              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-8 group-hover:scale-110 transition-transform duration-500 shadow-inner">
+              <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center text-accent mb-8 group-hover:scale-105 transition-transform duration-500 shadow-inner">
                 {category.icon}
               </div>
               <h3 className="text-2xl font-black mb-8 tracking-tight">{category.title}</h3>

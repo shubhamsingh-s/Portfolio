@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Send, MapPin } from "lucide-react";
-import Magnetic from "./Magnetic";
 
 const Contact = () => {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
@@ -133,14 +132,12 @@ const Contact = () => {
                 />
               </div>
 
-              <Magnetic>
-                <button
-                  type="submit"
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-5 rounded-2xl font-black uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-xl shadow-accent/20"
-                >
-                  Send Message <Send className="w-5 h-5" />
-                </button>
-              </Magnetic>
+              <button
+                type="submit"
+                className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-5 rounded-2xl font-black uppercase tracking-widest flex items-center justify-center gap-3 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-accent/20"
+              >
+                Send Message <Send className="w-5 h-5" />
+              </button>
             </form>
           </motion.div>
         </div>
