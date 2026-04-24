@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Send, MapPin, Phone } from "lucide-react";
+import { Mail, Send, MapPin } from "lucide-react";
+import Magnetic from "./Magnetic";
 
 const Contact = () => {
   const [formState, setFormState] = useState({ name: "", email: "", message: "" });
